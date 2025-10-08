@@ -15,5 +15,11 @@ proof_type = "pol"
 # Request a challenge
 response = wtns_client.request_challenge(watchtower_address, 1, proof_type)
 
-# Print the response
+# Print the response for challenge request
+print(response)
+
+# Get the challenge status
+response = wtns_client.challenge_status(response["challenge_id"])
+
+# Print the response for challenge status
 print(response)
